@@ -1,0 +1,155 @@
+body {
+    background-color: #f1f4f9;
+    color: #212529;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+h2 {
+    color: #0d6efd;
+    font-size: 1.35rem;
+    margin-bottom: 16px;
+}
+
+
+.box {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow-wrap: break-word;
+}
+
+.box ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.box li {
+    margin-bottom: 8px;
+}
+
+
+.foto_perfil {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+.redes_sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.redes_sociais a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes_sociais img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.redes_sociais a:hover img {
+    transform: scale(1.1);
+}
+
+
+.table-responsive {
+    border-radius: 6px;
+}
+
+.table {
+    min-width: 360px;
+    margin-bottom: 0;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+}
+
+
+@media (min-width: 601px) and (max-width: 991px) {
+    .box {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .foto_perfil {
+        max-width: 240px;
+    }
+
+    .redes_sociais img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    .box {
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    .foto_perfil {
+        max-width: 220px;
+    }
+
+    .redes_sociais {
+        gap: 16px;
+    }
+
+    .redes_sociais img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
