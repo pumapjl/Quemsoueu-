@@ -1,28 +1,49 @@
+
+/* CORES DO SITE */
+:root {
+    --fundo: #0b1020;
+    --caixa: #111a2e;
+    --azul: #38bdf8;
+    --texto: #e5edff;
+}
+
+/* CONFIGURAÇÃO GERAL */
 body {
-    background-color: #f1f4f9;
-    color: #212529;
+    background-color: var(--fundo);
+    color: var(--texto);
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-h1 {
-    color: #0d6efd;
+/* TÍTULOS */
+h1, h2, h3 {
+    color: var(--azul);
     font-weight: bold;
 }
 
+h1 {
+    text-shadow: 0 0 15px #38bdf844;
+}
+
 h2 {
-    color: #0d6efd;
     font-size: 1.35rem;
     margin-bottom: 16px;
 }
 
-
+/* CAIXAS DE CONTEÚDO */
 .box {
-    background-color: #ffffff;
+    background-color: var(--caixa);
     padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #263653;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px #00000040;
+    height: 100%;
     overflow-wrap: break-word;
+}
+
+.box p, .box li {
+    color: #a7b4cc;
+    line-height: 1.8;
 }
 
 .box ul {
@@ -31,111 +52,113 @@ h2 {
 }
 
 .box li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-
+/* FOTO DE PERFIL */
 .foto_perfil {
     display: block;
     width: 100%;
     max-width: 280px;
     height: auto;
     margin: 0 auto;
-    border-radius: 12px;
-    object-fit: cover;
+    border: 2px solid var(--azul);
+    border-radius: 16px;
+    box-shadow: 0 0 18px #38bdf830;
 }
 
-
+/* REDES SOCIAIS */
 .redes_sociais {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-}
-
-.redes_sociais a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    gap: 22px;
 }
 
 .redes_sociais img {
-    width: 65px;
-    height: 65px;
+    width: 56px;
+    height: 56px;
     object-fit: contain;
-    transition: transform 0.2s ease;
+    transition: 0.2s;
 }
 
 .redes_sociais a:hover img {
     transform: scale(1.1);
 }
 
-
-.table-responsive {
-    border-radius: 6px;
+/* LINKS E BOTÕES */
+a {
+    transition: 0.2s;
 }
 
+a:hover {
+    color: var(--azul);
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: var(--azul);
+    box-shadow: 0 0 12px #38bdf830;
+}
+
+/* TABELA */
 .table {
+    --bs-table-bg: var(--caixa);
+    --bs-table-color: var(--texto);
+    --bs-table-border-color: #30415f;
+    --bs-table-striped-bg: #17243c;
+    --bs-table-striped-color: var(--texto);
+    --bs-table-hover-bg: #1b3152;
+    --bs-table-hover-color: white;
     min-width: 360px;
     margin-bottom: 0;
 }
 
-.table th,
-.table td {
+.table th, .table td {
     padding: 12px;
 }
 
+.table thead th {
+    background-color: #172c4d;
+    color: var(--azul);
+}
+
+.table-responsive {
+    border-radius: 6px;
+}
 
 @media (min-width: 601px) and (max-width: 991px) {
     .box {
         padding: 20px;
     }
 
+    .jogo-card img {
+        height: 190px;
+    }
+}
+
+@media (max-width: 600px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     h2 {
         font-size: 1.2rem;
     }
 
-    .foto_perfil {
-        max-width: 240px;
-    }
-
-    .redes_sociais img {
-        width: 55px;
-        height: 55px;
-    }
-}
-
-
-@media (max-width: 600px) {
-    body {
-        font-size: 15px;
-    }
-
-    .container {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    h1 {
-        font-size: 1.7rem;
-    }
-
-    h2 {
-        font-size: 1.15rem;
-    }
-
     .box {
         padding: 16px;
-        border-radius: 8px;
+        border-radius: 12px;
     }
 
-    .foto_perfil {
-        max-width: 220px;
+    .jogo-card img {
+        height: 200px;
     }
 
     .redes_sociais {
@@ -143,12 +166,11 @@ h2 {
     }
 
     .redes_sociais img {
-        width: 48px;
-        height: 48px;
+        width: 46px;
+        height: 46px;
     }
 
-    .table th,
-    .table td {
+    .table th, .table td {
         padding: 8px;
         font-size: 14px;
     }
